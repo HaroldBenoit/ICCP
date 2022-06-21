@@ -14,7 +14,6 @@ The Environment class defines the basic functionalities that a reinforcement lea
 
 The class implements the classic "agent-environment" loop.
 
-![Agent-environment loop](/assets/rl_diagram_transparent_bg.png "Agent-environment loop (credits to Gym)")
 
 ## Class methods and definitions
 
