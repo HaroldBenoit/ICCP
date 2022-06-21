@@ -1,5 +1,5 @@
 # ICCP
-ICCP or Integrated Comfort Controller Pipeline is a project created by Harold Benoit for the ICE Lab at EPFL. 
+ICCP or Integrated Comfort Controller Pipeline is a project created for the ICE Lab at EPFL. 
 
 Its goal is to facilitate the development and research of reinforcement learning based controllers in the context of energy saving and thermal comfort in buildings.
 
