@@ -73,7 +73,7 @@ def search_similar(searching_directory: str, subset_log_dict: Dict[str, Any]) ->
 
 ## Usage
 
-The main idea is to leverage the `from_dict` method from the [Agent class](../../../enac-docs/docs/technical-reference/agent/agent_classs) to easily give the dictionary of arguments (that we obtain from `all_combinations_list`) to an Agent. 
+The main idea is to leverage the `from_dict` method from the [Agent class](../../../ICCP/docs/technical-reference/agent/agent_classs) to easily give the dictionary of arguments (that we obtain from `all_combinations_list`) to an Agent. 
 
 `search_similar` allows us to avoid recomputation of already trained agents.
 

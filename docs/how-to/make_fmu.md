@@ -8,7 +8,7 @@ permalink: /docs/how-to/make_fmu
 
 # How to make EnergyPlus FMUs
 
-This tutorial assumes that you have followed the [software installation tutorial](../../../enac-docs/docs/get-started/software_installation) previously.
+This tutorial assumes that you have followed the [software installation tutorial](../../../ICCP/docs/get-started/software_installation) previously.
 
 ## Acknowledgements 
 

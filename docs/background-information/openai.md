@@ -14,11 +14,11 @@ permalink: /docs/background-information/openai
 
 Although it is widely used in teh scientific community, its main users are computer scientists and software engineers. This has for effect that integration and usage can be somewhat tedious on certain aspects (custom envrionment installation). As this project is to be used in the context of the [ICE lab](https://www.epfl.ch/labs/ice/), its users are not trained software engineers. Thus, it was chosen to make a compromise.
 
-The [Environment class](../../../enac-docs/docs/technical-reference/environment/environment_class) has an API almost identical to the Gym API but it doesn't require the end user to `pip install` its own environments and deal with namespace issues.
+The [Environment class](../../../ICCP/docs/technical-reference/environment/environment_class) has an API almost identical to the Gym API but it doesn't require the end user to `pip install` its own environments and deal with namespace issues.
 
 Thus, we keep the simplicity of use and:
-- any Gym environment can be very easily converted to our [Environment](../../../enac-docs/docs/technical-reference/environment/environment_class) interface.
+- any Gym environment can be very easily converted to our [Environment](../../../ICCP/docs/technical-reference/environment/environment_class) interface.
 
-- any Gym compatible RL algorithm can be very easily converted to our [Environment](../../../enac-docs/docs/technical-reference/environment/environment_class) interface.
+- any Gym compatible RL algorithm can be very easily converted to our [Environment](../../../ICCP/docs/technical-reference/environment/environment_class) interface.
 
 

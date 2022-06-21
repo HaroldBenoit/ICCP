@@ -11,9 +11,9 @@ permalink: /docs/how-to/creating_agent
 In this how-to guide, we will give some tips as to how to create your own agent (RL-based or not).
 
 
-1. Please read the [Agent class](../../../enac-docs/docs/technical-reference/agent/agent_class), [Environment class](../../../enac-docs/docs/technical-reference/environment/environment_class), and [Logger class](../../../enac-docs/docs/technical-reference/logger/logger_class) completely and carefully, otherwise you will not understand the context and meaning of what you're building.
+1. Please read the [Agent class](../../../ICCP/docs/technical-reference/agent/agent_class), [Environment class](../../../ICCP/docs/technical-reference/environment/environment_class), and [Logger class](../../../ICCP/docs/technical-reference/logger/logger_class) completely and carefully, otherwise you will not understand the context and meaning of what you're building.
 
-2. If you would like to read some source code of already implemented agents, please read first [Simple Environment](../../../enac-docs/docs/technical-reference/environment/simple_environment) since all agents interact with this environment.
+2. If you would like to read some source code of already implemented agents, please read first [Simple Environment](../../../ICCP/docs/technical-reference/environment/simple_environment) since all agents interact with this environment.
 
 3. If you would like a simple not RL-based agent, please read the source code of `OnOff_Agent.py`.
 

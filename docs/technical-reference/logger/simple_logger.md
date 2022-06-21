@@ -8,7 +8,7 @@ permalink: /docs/technical-reference/logger/simple_logger
 ---
 
 # Simple Logger
-The Simple Logger is the basic logger included in `ICCP`. This logger works in conjunction with the [Simple Environment](../../../../enac-docs/docs/technical-reference/environment/simple_environment).
+The Simple Logger is the basic logger included in `ICCP`. This logger works in conjunction with the [Simple Environment](../../../../ICCP/docs/technical-reference/environment/simple_environment).
 
 
 ## Class methods and definitions
@@ -16,7 +16,7 @@ The Simple Logger is the basic logger included in `ICCP`. This logger works in c
 
 ### Initialization
 
-As said in the [Logger class](../../../../enac-docs//docs/technical-reference/logger/logger_class) description, a logger is instantiated for a single training/testing session and is responsible for logging all the important data from the session.
+As said in the [Logger class](../../../../ICCP/docs/technical-reference/logger/logger_class) description, a logger is instantiated for a single training/testing session and is responsible for logging all the important data from the session.
 
 When initializing the Simple Logger, given this signature : 
 ```python
@@ -66,7 +66,7 @@ It will create the following folders inside the of the logging path:
 
  Nonetheless, we will explain how to use it:
 
- 1. Decide what will the `summary_df` DataFrame contain. It will probably contain some parameters of [Simple Environment](../../../../enac-docs/docs/technical-reference/environment/simple_environment) such as "Tair" or "PMV", and the action taken at each step "Tset". Lastly, you may wish to keep track of agent's specific parameters such as "Loss".
+ 1. Decide what will the `summary_df` DataFrame contain. It will probably contain some parameters of [Simple Environment](../../../../ICCP/docs/technical-reference/environment/simple_environment) such as "Tair" or "PMV", and the action taken at each step "Tset". Lastly, you may wish to keep track of agent's specific parameters such as "Loss".
 
  2. `is_summary` should be equal to True, if you're calling this function at the end of your last training / testing episode and would like plots that summarize the entire training / testing session.
 

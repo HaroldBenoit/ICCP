@@ -11,13 +11,13 @@ permalink: /docs/how-to/search
 
 #### Introduction
 
-After a training / testing session has been finished,  a [Logger](../../../enac-docs/docs/technical-reference/logger/logger_class) will take care of plotting and saving relevant data. 
+After a training / testing session has been finished,  a [Logger](../../../ICCP/docs/technical-reference/logger/logger_class) will take care of plotting and saving relevant data. 
 
 After repeating this process multiple times, one may find itself with a huge number of log folders and no easy way to search through them and rank them.
 
 This is where `search_paths` comes in play. 
 
-After a session, the [Logger](../../../enac-docs/docs/technical-reference/logger/logger_class) will create a json file (e.g. `env_params_2022_5_10_15_0.json`) containing all relevant experiment parameters.
+After a session, the [Logger](../../../ICCP/docs/technical-reference/logger/logger_class) will create a json file (e.g. `env_params_2022_5_10_15_0.json`) containing all relevant experiment parameters.
 
 Here's a small snippet of such a json file.
 
@@ -96,7 +96,7 @@ searching_directory = r"C:\Users\DIET_Controller"
 sorted_path_list = Performance.search_paths(searching_directory,conditions, utility_function=Performance.cumulative_reward, top_k = 5, normalized=True)
 ```
 
-Furthermore, one should be aware when using "cumulative" [utility functions](../../../enac-docs/docs/background-information/utility), there will be a bias towards sessions with a larger number of episodes if `normalized= False`. Putting `normalized = True` corrects this bias.
+Furthermore, one should be aware when using "cumulative" [utility functions](../../../ICCP/docs/background-information/utility), there will be a bias towards sessions with a larger number of episodes if `normalized= False`. Putting `normalized = True` corrects this bias.
 
 #### Conclusion
 

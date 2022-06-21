@@ -10,13 +10,13 @@ permalink: /docs/technical-reference/performance
 
 `ICCP` contains a module called `Performance` which contains all functionalities to assess the performance of agents and also easily search through the logs. This functionality of `ICCP` makes working with agents much easier and faster. One can easily iterate to optimize its agents performance and also compare it to other agents.
 
-To understand why and how the performance assessment was defined this way, please read the [background information](../../../enac-docs/docs/background-information/assessment) on `Performance`.
+To understand why and how the performance assessment was defined this way, please read the [background information](../../../ICCP/docs/background-information/assessment) on `Performance`.
 
 ## Class methods and definitions
 
 ### Utility functions
 
-To understand why and how utility functions are used, we refer to the [background information](../../../enac-docs/docs/background-information/utility) on it.
+To understand why and how utility functions are used, we refer to the [background information](../../../ICCP/docs/background-information/utility) on it.
 
 `cumulative_reward`
 ```python
@@ -215,16 +215,16 @@ def across_fixed_policy(
 
 ### Useful methods
 
-1. How to use `search_paths` is explained in [Searching through logs](../../../enac-docs/docs/how-to/search).
+1. How to use `search_paths` is explained in [Searching through logs](../../../ICCP/docs/how-to/search).
 
 <br>
 
 
-2. How to use `all_combinations_list` and `search_similar` is explained in [Hyperparameter tuning](../../../enac-docs/docs/how-to/hyper_tuning).
+2. How to use `all_combinations_list` and `search_similar` is explained in [Hyperparameter tuning](../../../ICCP/docs/how-to/hyper_tuning).
 
 <br>
 
-3. How to use `load_trained_agent`, `load_json_params`, and `load_summary_df` is explained in [Loading from logs](../../../enac-docs/docs/how-to/load).
+3. How to use `load_trained_agent`, `load_json_params`, and `load_summary_df` is explained in [Loading from logs](../../../ICCP/docs/how-to/load).
 
 
 

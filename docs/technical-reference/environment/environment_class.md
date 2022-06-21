@@ -9,7 +9,7 @@ permalink: /docs/technical-reference/environment/environment_class
 
 # Environment class
 
-The Environment class defines the basic functionalities that a reinforcement learning environment should have. Its functionalities are very similar to those of a OpenAI Gym environment. The choice for not implementing directly into an OpenAI Gym environment is further discussed in [Background information](../../../../enac-docs/docs/background-information/openai).
+The Environment class defines the basic functionalities that a reinforcement learning environment should have. Its functionalities are very similar to those of a OpenAI Gym environment. The choice for not implementing directly into an OpenAI Gym environment is further discussed in [Background information](../../../../ICCP/docs/background-information/openai).
 
 
 The class implements the classic "agent-environment" loop.

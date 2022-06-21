@@ -44,7 +44,7 @@ def step(self, action: np.ndarray):
         (where it hasn't been trained and such)"""
 ```
 
-`from_dict` allows to set the agent's parameters using a dictionary. Mostly used in the context of [hyperparameter tuning](../../../../enac-docs/docs/how-to/hyper_tuning).
+`from_dict` allows to set the agent's parameters using a dictionary. Mostly used in the context of [hyperparameter tuning](../../../../ICCP/docs/how-to/hyper_tuning).
 ```python
 def from_dict(self, dict_arguments: Dict[str, Any]) -> Agent:
     """Given a dictionary of key value pairs where the key is the name of an agent attribute

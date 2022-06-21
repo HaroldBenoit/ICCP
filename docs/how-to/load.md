@@ -11,11 +11,11 @@ permalink: /docs/how-to/load
 
 ## Introduction
 
-After a training / testing session has been finished,  a [Logger](../../../enac-docs/technical-reference/logger) will take care of plotting and saving relevant data. 
+After a training / testing session has been finished,  a [Logger](../../../ICCP/technical-reference/logger) will take care of plotting and saving relevant data. 
 
 To avoid recomputing and make life easier, the `Performance` module has a few "loading" functions to load useful data from the logs.
 
-This is usually the next after having found absolute paths of logs using `search_paths` like described in [Searching through logs](../../../enac-docs/docs/how-to/search).
+This is usually the next after having found absolute paths of logs using `search_paths` like described in [Searching through logs](../../../ICCP/docs/how-to/search).
 
 
 ## Methods

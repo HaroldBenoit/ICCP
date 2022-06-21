@@ -22,7 +22,7 @@ In this tutorial:
 6. Measure after-training performance of the agent. 
 
 
-This tutorial is done using the [`simple_simulation`](../../../enac-docs/docs/technical-reference/environment/simple_environment) EnergyPlus environment as it is readily available in `ICCP`. 
+This tutorial is done using the [`simple_simulation`](../../../ICCP/docs/technical-reference/environment/simple_environment) EnergyPlus environment as it is readily available in `ICCP`. 
 
 ### Imports
 

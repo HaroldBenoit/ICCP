@@ -35,7 +35,7 @@ Thus, the `Performance` module in `ICCP` aims to achieve a systematic, reproduci
 
 Using three axes of variability and two measures of variability, our procedure will assess the performance of a RL algorithm at a deeper level, especially tailored for real-world usage.
 
-Usually, this performance assessment may be ran on a RL controller that has been previously chosen for its excellent performance according to a defined [utility function](../../../enac-docs/docs/background-information/utility).
+Usually, this performance assessment may be ran on a RL controller that has been previously chosen for its excellent performance according to a defined [utility function](../../../ICCP/docs/background-information/utility).
 
 
 ## Measures of variability
