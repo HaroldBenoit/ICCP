@@ -1,0 +1,1 @@
+python  C:\Users\achatter\Downloads\EnergyPlusToFMU-v3.1.0\Scripts\EnergyPlusToFMU.py  -i C:\EnergyPlusV9-3-0\Energy+.idd -w C:\Users\achatter\Desktop\PhDResearch\DIET\Controller\Cosimulation_energyplus\CHE_GE_Geneva_2004-2018.epw -a 1 C:\Users\achatter\Desktop\PhDResearch\DIET\Controller\Cosimulation_energyplus\CELLS_v1.idf

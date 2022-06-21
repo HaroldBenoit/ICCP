@@ -1,0 +1,33 @@
+Program Version,EnergyPlus, Version 9.4.0-998c4b761e, YMD=2022.04.21 13:51
+1,5,Environment Title[],Latitude[deg],Longitude[deg],Time Zone[],Elevation[m]
+2,8,Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],Hour[],StartMinute[],EndMinute[],DayType
+3,5,Cumulative Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],DayType  ! When Daily Report Variables Requested
+4,2,Cumulative Days of Simulation[],Month[]  ! When Monthly Report Variables Requested
+5,1,Cumulative Days of Simulation[] ! When Run Period Report Variables Requested
+6,1,Calendar Year of Simulation[] ! When Annual Report Variables Requested
+7,1,CELLS:ROOMX1,Zone Outdoor Air Drybulb Temperature [C] !TimeStep
+8,1,PEOPLE CELLS:ROOMX1,People Occupant Count [] !TimeStep
+195,1,CELLS:ROOMX1,Zone Mean Radiant Temperature [C] !TimeStep
+196,1,CELLS:ROOMX1,Zone Mean Air Temperature [C] !TimeStep
+370,1,CELLS:ROOMX1,Zone Air Relative Humidity [%] !TimeStep
+692,1,CELLS:ROOMX1 IDEAL LOADS AIR,Zone Ideal Loads Zone Total Heating Energy [J] !TimeStep
+11,1,Electricity:Facility [J] !Hourly
+645,1,DistrictCooling:Facility [J] !Hourly
+596,1,DistrictHeating:Facility [J] !Hourly
+699,1,Carbon Equivalent:Facility [kg] !Hourly
+12,7,Electricity:Facility [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+646,7,DistrictCooling:Facility [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+597,7,DistrictHeating:Facility [J] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+700,7,Carbon Equivalent:Facility [kg] !Daily [Value,Min,Hour,Minute,Max,Hour,Minute]
+13,9,Electricity:Facility [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+647,9,DistrictCooling:Facility [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+598,9,DistrictHeating:Facility [J] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+701,9,Carbon Equivalent:Facility [kg] !Monthly [Value,Min,Day,Hour,Minute,Max,Day,Hour,Minute]
+15,11,Electricity:Facility [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+649,11,DistrictCooling:Facility [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+600,11,DistrictHeating:Facility [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+703,11,Carbon Equivalent:Facility [kg] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+10,1,Electricity:Facility [J] !TimeStep
+644,1,DistrictCooling:Facility [J] !TimeStep
+595,1,DistrictHeating:Facility [J] !TimeStep
+698,1,Carbon Equivalent:Facility [kg] !TimeStep

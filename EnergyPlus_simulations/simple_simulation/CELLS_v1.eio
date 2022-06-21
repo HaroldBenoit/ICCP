@@ -1,0 +1,430 @@
+Program Version,EnergyPlus, Version 9.4.0-998c4b761e, YMD=2022.04.21 13:51
+! <Version>, Version ID
+ Version, 9.3
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour,  6, 10
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 1, 25, 2, 8
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation, Do HVAC Sizing Simulation
+ Simulation Control, Yes, Yes, No, No, Yes, No
+! <Performance Precision Tradeoffs>, Use Coil Direct Simulation, Zone Radiant Exchange Algorithm, Override Mode, Number of Timestep In Hour, Force Euler Method, Minimum Number of Warmup Days, Force Suppress All Begin Environment Resets, Minimum System Timestep, MaxZoneTempDiff, MaxAllowedDelTemp
+ Performance Precision Tradeoffs, No, ScriptF, Normal, 6, No, 1, No, 1.0, 0.300, 2.0000E-003
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Zone Cooling Setpoint Not Met Time
+ Output Reporting Tolerances, 1.110, 1.110, 
+! <Site:GroundTemperature:BuildingSurface>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:BuildingSurface,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00
+! <Site:GroundTemperature:FCfactorMethod>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:FCfactorMethod,   7.20,   5.40,   4.70,   5.40,   7.20,   9.70,  12.20,  14.00,  14.70,  14.00,  12.20,   9.70
+! <Site:GroundTemperature:Shallow>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Shallow,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00
+! <Site:GroundTemperature:Deep>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Deep,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00
+! <Site:GroundReflectance>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   2.000,   2.000
+! <Site:GroundReflectance:Snow>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40
+! <Site:GroundReflectance:Snow:Daylighting>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient-Internal,Temperature Modifier Coefficient-Internal
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,Geneva AP GE CHE ISD-TMYx WMO#=067000,46.24,6.11,1.00,430.10,96264,1.1442
+! <Site Water Mains Temperature Information>,Calculation Method{},Water Mains Temperature Schedule Name{},Annual Average Outdoor Air Temperature{C},Maximum Difference In Monthly Average Outdoor Air Temperatures{deltaC},Fixed Default Water Mains Temperature{C}
+Site Water Mains Temperature Information,FixedDefault,NA,NA,NA,10.0
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,Building,0.000,Suburbs,4.00000E-002,0.40000,FullExterior,25,6
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,TARP
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,DOE-2
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Value {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference
+! <Zone Air Carbon Dioxide Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, No,N/A
+! <Zone Air Generic Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, No,N/A
+! <Zone Air Mass Flow Balance Simulation>, Enforce Mass Balance, Adjust Zone Mixing, Adjust Zone Infiltration {AddInfiltration | AdjustInfiltration | None}, Infiltration Zones {MixingSourceZonesOnly | AllZones}
+ Zone Air Mass Flow Balance Simulation, No,N/A,N/A,N/A
+! <HVACSystemRootFindingAlgorithm>, Value {RegulaFalsi | Bisection | BisectionThenRegulaFalsi | RegulaFalsiThenBisection}
+ HVACSystemRootFindingAlgorithm, RegulaFalsi
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.220,370.000,6.500000E-003
+! <Surface Geometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,LowerLeftCorner,Counterclockwise,RelativeCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
+Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,2000,1.00E-008,1000.0
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,32,0
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,3,27,9
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, CELLS:ROOMX1,0.0,0.00,0.00,0.00,1.91,-3.57,2.95,1,1,1,0.38,3.45,-6.67,-0.48,1.40,4.50,3.10,58.82,TARP,DOE-2,18.98,38.20,29.02,8.21,6,4,0,Yes
+ Zone Information, CELLS:ENTRANCE,0.0,0.00,0.00,0.00,4.65,-3.57,2.95,1,1,1,3.45,5.86,-6.67,-0.48,1.40,4.50,3.10,46.39,TARP,DOE-2,14.97,14.99,13.00,0.00,6,1,0,Yes
+ Zone Information, CELLS:ROOMX2,0.0,0.00,0.00,0.00,7.48,-3.57,2.95,1,1,1,5.86,9.09,-6.67,-0.48,1.40,4.50,3.10,61.92,TARP,DOE-2,19.97,39.19,30.02,8.21,6,4,0,Yes
+! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
+ Zone Internal Gains Nominal, CELLS:ROOMX1,18.98,1.4,14.006,7.140E-002,9.100,0.000,0.000,3.000,0.000,0.000,12.100,No
+ Zone Internal Gains Nominal, CELLS:ENTRANCE,14.97,1.5,10.000,0.100,9.100,0.000,0.000,2.000,0.000,0.000,11.100,No
+ Zone Internal Gains Nominal, CELLS:ROOMX2,19.97,1.4,14.006,7.140E-002,9.100,0.000,0.000,3.000,0.000,0.000,12.100,No
+! <People Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Number of People {},People/Floor Area {person/m2},Floor Area per person {m2/person},Fraction Radiant,Fraction Convected,Sensible Fraction Calculation,Activity level,ASHRAE 55 Warnings,Carbon Dioxide Generation Rate,Nominal Minimum Number of People,Nominal Maximum Number of People
+ People Internal Gains Nominal, PEOPLE CELLS:ROOMX1,SIA_INDIVIDUALOFFICE_OCC,CELLS:ROOMX1,18.98,1.4,1.4,7.140E-002,14.006,0.300,0.700,AutoCalculate,ACTIVITY SCHEDULE 15272,No,3.8200E-008,0,1
+ People Internal Gains Nominal, PEOPLE CELLS:ENTRANCE,SLL_OFFICE_CIRCULATION_OCC,CELLS:ENTRANCE,14.97,1.5,1.5,0.100,10.000,0.300,0.700,AutoCalculate,ACTIVITY SCHEDULE 15279,No,3.8200E-008,0,1
+ People Internal Gains Nominal, PEOPLE CELLS:ROOMX2,SIA_INDIVIDUALOFFICE_OCC,CELLS:ROOMX2,19.97,1.4,1.4,7.140E-002,14.006,0.300,0.700,AutoCalculate,ACTIVITY SCHEDULE 15286,No,3.8200E-008,0,1
+! <Lights Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Lighting Level {W},Lights/Floor Area {W/m2},Lights per person {W/person},Fraction Return Air,Fraction Radiant,Fraction Short Wave,Fraction Convected,Fraction Replaceable,End-Use Category,Nominal Minimum Lighting Level {W},Nominal Maximum Lighting Level {W}
+ Lights Internal Gains Nominal, CELLS:ROOMX1,SIA_INDIVIDUALOFFICE_OCC,CELLS:ROOMX1,18.98,1.4,172.678,9.100,127.451,0.000,0.420,0.180,0.400,1.000,General,0.000,172.678
+ Lights Internal Gains Nominal, CELLS:ENTRANCE,SLL_OFFICE_CIRCULATION_LIGHT,CELLS:ENTRANCE,14.97,1.5,136.191,9.100,91.000,0.000,0.420,0.180,0.400,1.000,General,0.000,136.191
+ Lights Internal Gains Nominal, CELLS:ROOMX2,SIA_INDIVIDUALOFFICE_OCC,CELLS:ROOMX2,19.97,1.4,181.757,9.100,127.451,0.000,0.420,0.180,0.400,1.000,General,0.000,181.757
+! <OtherEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,Nominal Minimum Equipment Level {W},Nominal Maximum Equipment Level {W}
+ OtherEquipment Internal Gains Nominal, CELLS:ROOMX1 EQUIPMENT GAIN 1,SIA_INDIVIDUALOFFICE_OCC,CELLS:ROOMX1,18.98,1.4,56.927,3.000,42.017,0.000,0.200,0.000,0.800,0.000,56.927
+ OtherEquipment Internal Gains Nominal, CELLS:ENTRANCE EQUIPMENT GAIN 1,SLL_OFFICE_CIRCULATION_EQUIP,CELLS:ENTRANCE,14.97,1.5,29.932,2.000,20.000,0.000,0.200,0.000,0.800,0.000,29.932
+ OtherEquipment Internal Gains Nominal, CELLS:ROOMX2 EQUIPMENT GAIN 1,SIA_INDIVIDUALOFFICE_OCC,CELLS:ROOMX2,19.97,1.4,59.920,3.000,42.017,0.000,0.200,0.000,0.800,0.000,59.920
+! <Solar View Factor Check Values>,Zone/Enclosure Name,Original Check Value,Calculated Fixed Check Value,Final Check Value,Number of Iterations,Fixed RowSum Convergence,Used RowSum Convergence
+Solar View Factor Check Values,CELLS:ROOMX1,1.776357E-015,9.546129E-004,9.546129E-004,10,9.546129E-004,9.546129E-004
+Solar View Factor Check Values,CELLS:ENTRANCE,1.776357E-015,6.357061E-004,6.357061E-004,10,6.357061E-004,6.357061E-004
+Solar View Factor Check Values,CELLS:ROOMX2,3.552714E-015,9.474777E-004,9.474777E-004,10,9.474777E-004,9.474777E-004
+! <Construction CTF>,Construction Name,Index,#Layers,#CTFs,Time Step {hours},ThermalConductance {w/m2-K},OuterThermalAbsorptance,InnerThermalAbsorptance,OuterSolarAbsorptance,InnerSolarAbsorptance,Roughness
+! <Material CTF Summary>,Material Name,Thickness {m},Conductivity {w/m-K},Density {kg/m3},Specific Heat {J/kg-K},ThermalResistance {m2-K/w}
+! <Material:Air>,Material Name,ThermalResistance {m2-K/w}
+! <CTF>,Time,Outside,Cross,Inside,Flux (except final one)
+ Construction CTF,CELLS_EXTARNAL_FLOOR,   3,   7,  17,   0.333,     0.9284E-01,   0.900,   0.900,   0.600,   0.780,Rough
+ Material CTF Summary,WOODS - HARDWOOD (UNSPECIFIED) DRY_.O24,  0.0240,         0.170,    700.000,     1880.000,  0.1412    
+ Material CTF Summary,PARTICLEBOARD_.O6,  0.0600,         0.140,    600.000,     1700.000,  0.4286    
+ Material CTF Summary,MW GLASS WOOL (STANDARD BOARD)_.35,  0.3500,         0.036,     20.000,      840.000,   9.722    
+ Material CTF Summary,ORIENTED STRAND BOARD (OSB)_.O25,  0.0250,         0.130,    650.000,     1700.000,  0.1923    
+ Material CTF Summary,CEMENT/PLASTER/MORTAR - CEMENT PLASTER_.O5,  0.0500,         0.720,   1760.000,      840.000,  0.6944E-01
+ Material CTF Summary,LINOLEUM_.OO3,  0.0030,         0.170,   1200.000,     1400.000,  0.1765E-01
+ Material CTF Summary,PLYWOOD (HEAVYWEIGHT)_.O3,  0.0300,         0.150,    700.000,     1420.000,  0.2000    
+ CTF,  17,     -0.16011853E-11,      0.79593612E-24,     -0.10954897E-11,      0.28409471E-14
+ CTF,  16,      0.30569080E-09,      0.17375114E-20,      0.20988425E-09,     -0.73453357E-12
+ CTF,  15,     -0.32687425E-07,      0.16556862E-14,     -0.22457421E-07,      0.11627404E-09
+ CTF,  14,      0.20186177E-05,      0.11370566E-12,      0.13976249E-05,     -0.10469886E-07
+ CTF,  13,     -0.75177524E-04,      0.68808750E-11,     -0.53141706E-04,      0.55242243E-06
+ CTF,  12,      0.17824294E-02,      0.20811865E-09,      0.12941247E-02,     -0.17779727E-04
+ CTF,  11,     -0.28119973E-01,      0.32822930E-08,     -0.20963386E-01,      0.36613113E-03
+ CTF,  10,      0.30469243    ,      0.27400688E-07,      0.23236167    ,     -0.50157721E-02
+ CTF,   9,      -2.3175769    ,      0.12152300E-06,      -1.7986314    ,      0.47001236E-01
+ CTF,   8,       12.554363    ,      0.28360936E-06,       9.8620859    ,     -0.30697938    
+ CTF,   7,      -48.834445    ,      0.33934198E-06,      -38.646251    ,       1.4139135    
+ CTF,   6,       136.71216    ,      0.19790235E-06,       108.60385    ,      -4.6157706    
+ CTF,   5,      -274.17834    ,      0.51927550E-07,      -218.15855    ,       10.654564    
+ CTF,   4,       388.52371    ,      0.48272608E-08,       309.35569    ,      -17.182508    
+ CTF,   3,      -378.33109    ,      0.55426144E-09,      -301.47968    ,       18.855568    
+ CTF,   2,       240.14075    ,     -0.28330045E-09,       191.66603    ,      -13.371432    
+ CTF,   1,      -89.258843    ,      0.11629234E-09,      -71.440490    ,       5.5102987    
+ CTF,   0,       14.711033    ,     -0.20948837E-10,       11.823320    
+ Construction CTF,CELLS_ROOF,   5,   3,  11,   0.167,     0.1808    ,   0.900,   0.900,   0.290,   0.600,Rough
+ Material CTF Summary,GRAVEL_.O16,  0.0160,         0.360,   1840.000,      840.000,  0.4444E-01
+ Material CTF Summary,XPS EXTRUDED POLYSTYRENE  - CO2 BLOWING_.18,  0.1800,         0.034,     35.000,     1400.000,   5.294    
+ Material CTF Summary,ORIENTED STRAND BOARD (OSB)_.O25,  0.0250,         0.130,    650.000,     1700.000,  0.1923    
+ CTF,  11,     -0.17065436E-08,     -0.76612931E-14,     -0.32339652E-10,      0.11814131E-13
+ CTF,  10,      0.10658903E-04,      0.79271130E-14,      0.51096247E-06,     -0.32432013E-09
+ CTF,   9,     -0.19906777E-02,      0.49897447E-10,     -0.48727821E-03,      0.16799607E-05
+ CTF,   8,      0.74678597E-01,      0.15981668E-07,      0.25769920E-01,     -0.28706655E-03
+ CTF,   7,      -1.1803390    ,      0.10021966E-05,     -0.43703422    ,      0.73501012E-02
+ CTF,   6,       9.7858810    ,      0.16950174E-04,       3.6761139    ,     -0.82481109E-01
+ CTF,   5,      -46.802076    ,      0.92048138E-04,      -17.804549    ,      0.50482007    
+ CTF,   4,       134.73008    ,      0.17042951E-03,       52.645086    ,      -1.8239055    
+ CTF,   3,      -235.63488    ,      0.10301850E-03,      -96.079618    ,       3.9696613    
+ CTF,   2,       243.99046    ,      0.16827230E-04,       105.01796    ,      -5.0807625    
+ CTF,   1,      -137.12669    ,      0.43418273E-06,      -62.668738    ,       3.5033867    
+ CTF,   0,       32.165265    ,      0.19576755E-09,       15.625901    
+ Construction CTF,SLL_PARTITION_7O3_GYPSUM,   7,   3,   7,   0.167,     0.8065    ,   0.900,   0.900,   0.500,   0.500,Rough
+ Material CTF Summary,GYPSUM PLASTERBOARD_.O3,  0.0300,         0.250,    900.000,     1000.000,  0.1200    
+ Material CTF Summary,EPS EXPANDED POLYSTYRENE (STANDARD)_.O4,  0.0400,         0.040,     15.000,     1400.000,   1.000    
+ Material CTF Summary,GYPSUM PLASTERBOARD_.O3,  0.0300,         0.250,    900.000,     1000.000,  0.1200    
+ CTF,   7,     -0.12050584E-09,      0.93078154E-11,     -0.12050588E-09,      0.11917129E-13
+ CTF,   6,      0.77109334E-06,      0.53576291E-07,      0.77109334E-06,     -0.16638558E-09
+ CTF,   5,     -0.72489959E-03,      0.33538558E-04,     -0.72489959E-03,      0.60325579E-06
+ CTF,   4,      0.11024481    ,      0.26418436E-02,      0.11024481    ,     -0.38936909E-03
+ CTF,   3,      -3.4732251    ,      0.31196166E-01,      -3.4732251    ,      0.25080997E-01
+ CTF,   2,       20.956891    ,      0.59824017E-01,       20.956891    ,     -0.46022875    
+ CTF,   1,      -37.892148    ,      0.15579630E-01,      -37.892148    ,       1.2998640    
+ CTF,   0,       20.408375    ,      0.13806392E-03,       20.408375    
+ Construction CTF,SLL_PARTITION_7O3_GYPSUM_REV,   8,   3,   7,   0.167,     0.8065    ,   0.900,   0.900,   0.500,   0.500,Rough
+ Material CTF Summary,GYPSUM PLASTERBOARD_.O3,  0.0300,         0.250,    900.000,     1000.000,  0.1200    
+ Material CTF Summary,EPS EXPANDED POLYSTYRENE (STANDARD)_.O4,  0.0400,         0.040,     15.000,     1400.000,   1.000    
+ Material CTF Summary,GYPSUM PLASTERBOARD_.O3,  0.0300,         0.250,    900.000,     1000.000,  0.1200    
+ CTF,   7,     -0.12050588E-09,      0.93078154E-11,     -0.12050584E-09,      0.11917129E-13
+ CTF,   6,      0.77109334E-06,      0.53576291E-07,      0.77109334E-06,     -0.16638558E-09
+ CTF,   5,     -0.72489959E-03,      0.33538558E-04,     -0.72489959E-03,      0.60325579E-06
+ CTF,   4,      0.11024481    ,      0.26418436E-02,      0.11024481    ,     -0.38936909E-03
+ CTF,   3,      -3.4732251    ,      0.31196166E-01,      -3.4732251    ,      0.25080997E-01
+ CTF,   2,       20.956891    ,      0.59824017E-01,       20.956891    ,     -0.46022875    
+ CTF,   1,      -37.892148    ,      0.15579630E-01,      -37.892148    ,       1.2998640    
+ CTF,   0,       20.408375    ,      0.13806392E-03,       20.408375    
+ Construction CTF,CELLS_EXTERNAL_WALL_ROOM2,   9,   4,  18,   0.167,     0.1733    ,   0.900,   0.900,   0.500,   0.780,Rough
+ Material CTF Summary,PAINTED OAK_.O24,  0.0240,         0.190,    700.000,     2390.000,  0.1263    
+ Material CTF Summary,7_RVAL_2,  0.0000,         0.000,      0.000,        0.000,  0.2100    
+ Material CTF Summary,EPS EXPANDED POLYSTYRENE (STANDARD)_.18,  0.1800,         0.040,     15.000,     1400.000,   4.500    
+ Material CTF Summary,PLYWOOD (HEAVYWEIGHT)_.14,  0.1400,         0.150,    700.000,     1420.000,  0.9333    
+ CTF,  18,      0.12031673E-09,     -0.47676025E-22,      0.24398204E-11,     -0.19065152E-12
+ CTF,  17,     -0.26780529E-07,      0.13658855E-19,     -0.10255959E-08,      0.80273713E-10
+ CTF,  16,      0.23307617E-05,     -0.37875082E-16,      0.14469571E-06,     -0.11354596E-07
+ CTF,  15,     -0.10290578E-03,     -0.42712835E-15,     -0.89187091E-05,      0.70331712E-06
+ CTF,  14,      0.26169091E-02,      0.50034375E-14,      0.28820629E-03,     -0.22901693E-04
+ CTF,  13,     -0.42204707E-01,      0.42847516E-12,     -0.56182282E-02,      0.45089776E-03
+ CTF,  12,      0.46165198    ,      0.14008693E-10,      0.72068802E-01,     -0.58539370E-02
+ CTF,  11,      -3.5838649    ,      0.23128117E-09,     -0.64237365    ,      0.52914718E-01
+ CTF,  10,       20.352611    ,      0.19324863E-08,       4.1197529    ,     -0.34481914    
+ CTF,   9,      -86.222622    ,      0.86227269E-08,      -19.438462    ,       1.6562911    
+ CTF,   8,       275.63164    ,      0.20229703E-07,       68.378823    ,      -5.9421983    
+ CTF,   7,      -667.97569    ,      0.25501935E-07,      -180.42060    ,       16.018442    
+ CTF,   6,       1224.9382    ,      0.15534632E-07,       356.85947    ,      -32.422519    
+ CTF,   5,      -1684.4975    ,      0.55376961E-08,      -524.97897    ,       48.882247    
+ CTF,   4,       1705.6258    ,     -0.73106312E-09,       564.61573    ,      -53.950593    
+ CTF,   3,      -1231.2469    ,      0.63285839E-09,      -430.29650    ,       42.242138    
+ CTF,   2,       598.54960    ,     -0.31676206E-09,       219.70464    ,      -22.180941    
+ CTF,   1,      -175.35289    ,      0.99688164E-10,      -67.312087    ,       6.9944626    
+ CTF,   0,       23.359691    ,     -0.14206766E-10,       9.3438486    
+ Construction CTF,WOODEN DOOR,  11,   1,   5,   0.167,      5.429    ,   0.900,   0.900,   0.500,   0.500,Rough
+ Material CTF Summary,PAINTED OAK_.O35,  0.0350,         0.190,    700.000,     2390.000,  0.1842    
+ CTF,   5,     -0.44788911E-05,      0.35521661E-06,     -0.44788911E-05,      0.29024899E-07
+ CTF,   4,      0.49759283E-02,      0.66593185E-03,      0.49759283E-02,     -0.42586259E-04
+ CTF,   3,     -0.56015066    ,      0.64905154E-01,     -0.56015066    ,      0.72372323E-02
+ CTF,   2,       8.4807358    ,      0.64403548    ,       8.4807358    ,     -0.17211907    
+ CTF,   1,      -27.249377    ,      0.79578406    ,      -27.249377    ,      0.87330703    
+ CTF,   0,       20.906886    ,      0.77674710E-01,       20.906886    
+! <WindowConstruction>,Construction Name,Index,#Layers,Roughness,Conductance {W/m2-K},SHGC,Solar Transmittance at Normal Incidence,Visible Transmittance at Normal Incidence
+! <WindowMaterial:Glazing>, Material Name, Optical Data Type, Spectral Data Set Name, Thickness {m}, Solar Transmittance,Front Solar Reflectance, Back Solar Reflectance, Visible Transmittance, Front Visible Reflectance,Back Visible Reflectance,Infrared Transmittance, Front Thermal Emissivity, Back Thermal Emissivity,Conductivity {W/m-K},Dirt Factor,Solar Diffusing
+! <WindowMaterial:Blind>,Material Name,Slat Width {m},Slat Separation {m},Slat Thickness {m},Slat Angle {deg},Slat Beam Solar Transmittance,Slat Beam Solar Front Reflectance,Blind To Glass Distance {m}
+ WindowConstruction,1001,13,1,VerySmooth,0.600,0.501,0.420,0.752
+ WindowMaterial:Glazing,SIMPLE 1001,SpectralAverage,,5.43307E-002,0.41846,0.41028,0.41028,0.75000,0.14157,0.14938,0.00000,0.84000,0.84000,3.65959E-002,1.00000,No
+ WindowConstruction,2001,14,2,Rough,0.589,7.139E-002,5.889E-002,0.102
+ WindowMaterial:Blind,20002,2.5000E-002,1.8750E-002,1.0000E-003,45.000,0.000,0.500,5.000E-002
+ WindowMaterial:Glazing,SIMPLE 1001,SpectralAverage,,5.43307E-002,0.41846,0.41028,0.41028,0.75000,0.14157,0.14938,0.00000,0.84000,0.84000,3.65959E-002,1.00000,No
+! <Shadowing/Sun Position Calculations Annual Simulations>, Shading Calculation Method, Shading Calculation Update Frequency Method, Shading Calculation Update Frequency {days}, Maximum Figures in Shadow Overlap Calculations {}, Polygon Clipping Algorithm, Pixel Counting Resolution, Sky Diffuse Modeling Algorithm, Output External Shading Calculation Results, Disable Self-Shading Within Shading Zone Groups, Disable Self-Shading From Shading Zone Groups to Other Zones
+Shadowing/Sun Position Calculations Annual Simulations,PolygonClipping,Periodic,20,15000,SutherlandHodgman,512,SimpleSkyDiffuseModeling,No,No,No
+! <Zone/Window Adjacency Daylighting Counts>, Zone Name, Number of Exterior Windows, Number of Exterior Windows in Adjacent Zones
+Zone/Window Adjacency Daylighting Counts, CELLS:ROOMX1,4,0
+Zone/Window Adjacency Daylighting Counts, CELLS:ENTRANCE,0,0
+Zone/Window Adjacency Daylighting Counts, CELLS:ROOMX2,4,0
+! <Zone/Window Adjacency Daylighting Matrix>, Zone Name, Number of Adjacent Zones with Windows,Adjacent Zone Names - 1st 100 (max)
+Zone/Window Adjacency Daylighting Matrix, CELLS:ROOMX1,0
+Zone/Window Adjacency Daylighting Matrix, CELLS:ENTRANCE,0
+Zone/Window Adjacency Daylighting Matrix, CELLS:ROOMX2,0
+! <Surface View Factor Check Values>,Zone/Enclosure Name,Original Check Value,Calculated Fixed Check Value,Final Check Value,Number of Iterations,Fixed RowSum Convergence,Used RowSum Convergence
+Surface View Factor Check Values,CELLS:ROOMX1,1.776357E-015,9.546129E-004,9.546129E-004,10,9.546129E-004,9.546129E-004
+Surface View Factor Check Values,CELLS:ENTRANCE,1.776357E-015,6.357061E-004,6.357061E-004,10,6.357061E-004,6.357061E-004
+Surface View Factor Check Values,CELLS:ROOMX2,3.552714E-015,9.474777E-004,9.474777E-004,10,9.474777E-004,9.474777E-004
+! <Surface Convection Parameters>, Surface Name, Outside Model Assignment, Outside Area [m2], Outside Perimeter [m], Outside Height [m], Inside Model Assignment, Inside Height [m], Inside Perimeter Envelope [m], Inside Hydraulic Diameter [m], Window Wall Ratio, Window Location, Near Radiant {Yes/No}, Has Active HVAC {Yes/No}
+Surface Convection Parameters,CELLS:ROOMX1_PARTITION_2_0_0,0,0.00,0.00,0.00,0,3.10,12.32,4.10,0.22,0,No,No
+Surface Convection Parameters,CELLS:ROOMX1_WALL_3_0_0,0,25.81,27.20,4.50,0,3.10,12.32,4.10,0.22,3,No,No
+Surface Convection Parameters,CELLS:ROOMX1_WALL_3_0_0_0_0_1_WIN,0,25.81,27.20,4.50,0,3.10,12.32,4.10,0.22,2,No,No
+Surface Convection Parameters,CELLS:ROOMX1_WALL_3_0_0_1_0_0_WIN,0,25.81,27.20,4.50,0,3.10,12.32,4.10,0.22,2,No,No
+Surface Convection Parameters,CELLS:ROOMX1_WALL_4_0_0,0,19.19,22.35,4.50,0,3.10,12.32,4.10,0.22,4,No,No
+Surface Convection Parameters,CELLS:ROOMX1_WALL_5_0_0,0,25.81,31.54,4.50,0,3.10,12.32,4.10,0.22,3,No,No
+Surface Convection Parameters,CELLS:ROOMX1_WALL_5_0_0_0_0_1_WIN,0,25.81,31.54,4.50,0,3.10,12.32,4.10,0.22,2,No,No
+Surface Convection Parameters,CELLS:ROOMX1_WALL_5_0_0_1_0_0_WIN,0,25.81,31.54,4.50,0,3.10,12.32,4.10,0.22,2,No,No
+Surface Convection Parameters,CELLS:ROOMX1_EXTFLOOR_0_0_0,0,18.98,18.51,0.00,0,3.10,12.32,4.10,0.22,0,No,No
+Surface Convection Parameters,CELLS:ROOMX1_ROOF_1_0_0,0,53.91,32.32,0.00,0,3.10,12.32,4.10,0.22,0,No,No
+Surface Convection Parameters,CELLS:ENTRANCE_PARTITION_4_0_10000,0,0.00,0.00,0.00,0,3.10,4.84,3.48,0.00,0,No,No
+Surface Convection Parameters,CELLS:ENTRANCE_PARTITION_2_0_0,0,0.00,0.00,0.00,0,3.10,4.84,3.48,0.00,0,No,No
+Surface Convection Parameters,CELLS:ENTRANCE_WALL_3_0_0,0,25.81,27.20,4.50,0,3.10,4.84,3.48,0.00,0,No,No
+Surface Convection Parameters,CELLS:ENTRANCE_WALL_5_0_0,0,25.81,31.54,4.50,0,3.10,4.84,3.48,0.00,0,No,No
+Surface Convection Parameters,CELLS:ENTRANCE_WALL_5_0_0_0_0_0_DOOR,0,25.81,31.54,4.50,0,3.10,4.84,3.48,0.00,0,No,No
+Surface Convection Parameters,CELLS:ENTRANCE_EXTFLOOR_0_0_0,0,14.97,17.22,0.00,0,3.10,4.84,3.48,0.00,0,No,No
+Surface Convection Parameters,CELLS:ENTRANCE_ROOF_1_0_0,0,53.91,32.32,0.00,0,3.10,4.84,3.48,0.00,0,No,No
+Surface Convection Parameters,CELLS:ROOMX2_PARTITION_4_0_10001,0,0.00,0.00,0.00,0,3.10,12.64,4.24,0.21,0,No,No
+Surface Convection Parameters,CELLS:ROOMX2_WALL_2_0_0,0,19.19,31.54,4.50,0,3.10,12.64,4.24,0.21,3,No,No
+Surface Convection Parameters,CELLS:ROOMX2_WALL_3_0_0,0,25.81,27.20,4.50,0,3.10,12.64,4.24,0.21,3,No,No
+Surface Convection Parameters,CELLS:ROOMX2_WALL_3_0_0_0_0_1_WIN,0,25.81,27.20,4.50,0,3.10,12.64,4.24,0.21,2,No,No
+Surface Convection Parameters,CELLS:ROOMX2_WALL_3_0_0_1_0_0_WIN,0,25.81,27.20,4.50,0,3.10,12.64,4.24,0.21,2,No,No
+Surface Convection Parameters,CELLS:ROOMX2_WALL_5_0_0,0,25.81,31.54,4.50,0,3.10,12.64,4.24,0.21,3,No,No
+Surface Convection Parameters,CELLS:ROOMX2_WALL_5_0_0_0_0_1_WIN,0,25.81,31.54,4.50,0,3.10,12.64,4.24,0.21,2,No,No
+Surface Convection Parameters,CELLS:ROOMX2_WALL_5_0_0_1_0_0_WIN,0,25.81,31.54,4.50,0,3.10,12.64,4.24,0.21,2,No,No
+Surface Convection Parameters,CELLS:ROOMX2_EXTFLOOR_0_0_0,0,19.97,18.83,0.00,0,3.10,12.64,4.24,0.21,0,No,No
+Surface Convection Parameters,CELLS:ROOMX2_ROOF_1_0_0,0,53.91,32.32,0.00,0,3.10,12.64,4.24,0.21,0,No,No
+! <Building Convection Parameters:North Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:North Facade, 27.20,4.50,0.00,9.09,-0.48,0.00,0.00,4.50
+! <Building Convection Parameters:Northeast Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:Northeast Facade, 0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+! <Building Convection Parameters:East Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:East Facade, 31.54,4.50,0.00,9.09,-6.67,0.00,0.00,4.50
+! <Building Convection Parameters:Southeast Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:Southeast Facade, 0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+! <Building Convection Parameters:South Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:South Facade, 31.54,4.50,0.00,9.09,-6.67,0.00,0.00,4.50
+! <Building Convection Parameters:Southwest Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:Southwest Facade, 0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+! <Building Convection Parameters:West Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:West Facade, 22.35,4.50,0.00,0.38,-6.67,0.00,0.00,4.50
+! <Building Convection Parameters:Northwest Facade>, Perimeter, Height, Xmin, Xmax, Ymin, Ymax, Zmin, Zmax 
+Building Convection Parameters:NorthwWest Facade, 0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+! <Building Convection Parameters:Roof>, Area [m2], Perimeter [m], Height [m], XdYdZd:X, XdYdZd:Y, XdYdZd:Z,XdYdZu:X, XdYdZu:Y, XdYdZu:Z,XdYuZd:X, XdYuZd:Y, XdYuZd:Z,XdYuZu:X, XdYuZu:Y, XdYuZu:Z,XuYdZd:X, XuYdZd:Y, XuYdZd:Z,XuYuZd:X, XuYuZd:Y, XuYuZd:Z,XuYdZu:X, XuYdZu:Y, XuYdZu:Z,XuYuZu:X, XuYuZu:Y, XuYuZu:Z
+Building Convection Parameters:Roof,53.91,32.32,0.00,0.380,-6.666,4.500,0.380,-6.666,4.500,0.380,-0.476,4.500,0.380,-0.476,4.500,9.090,-6.666,4.500,9.090,-0.476,4.500,9.090,-6.666,4.500,9.090,-0.476,4.500
+! <ZoneInfiltration Airflow Stats Nominal>,Name,Schedule Name,Zone Name, Zone Floor Area {m2}, # Zone Occupants,Design Volume Flow Rate {m3/s},Volume Flow Rate/Floor Area {m3/s-m2},Volume Flow Rate/Exterior Surface Area {m3/s-m2},ACH - Air Changes per Hour,Equation A - Constant Term Coefficient {},Equation B - Temperature Term Coefficient {1/C},Equation C - Velocity Term Coefficient {s/m}, Equation D - Velocity Squared Term Coefficient {s2/m2}
+ ZoneInfiltration Airflow Stats Nominal, CELLS:ROOMX1 INFILTRATION,ON 24/7,CELLS:ROOMX1,18.98,1.4,4.902E-003,2.583E-004,6.438E-005,0.300,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, CELLS:ENTRANCE INFILTRATION,ON 24/7,CELLS:ENTRANCE,14.97,1.5,3.866E-003,2.583E-004,8.241E-005,0.300,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, CELLS:ROOMX2 INFILTRATION,ON 24/7,CELLS:ROOMX2,19.97,1.4,5.160E-003,2.583E-004,6.520E-005,0.300,1.000,0.000,0.000,0.000
+! <ZoneVentilation Airflow Stats Nominal>,Name,Schedule Name,Zone Name, Zone Floor Area {m2}, # Zone Occupants,Design Volume Flow Rate {m3/s},Volume Flow Rate/Floor Area {m3/s-m2},Volume Flow Rate/person Area {m3/s-person},ACH - Air Changes per Hour,Fan Type {Exhaust;Intake;Natural},Fan Pressure Rise {Pa},Fan Efficiency {},Equation A - Constant Term Coefficient {},Equation B - Temperature Term Coefficient {1/C},Equation C - Velocity Term Coefficient {s/m}, Equation D - Velocity Squared Term Coefficient {s2/m2},Minimum Indoor Temperature{C}/Schedule,Maximum Indoor Temperature{C}/Schedule,Delta Temperature{C}/Schedule,Minimum Outdoor Temperature{C}/Schedule,Maximum Outdoor Temperature{C}/Schedule,Maximum WindSpeed{m/s}
+ ZoneVentilation Airflow Stats Nominal, CELLS:ROOMX1 NAT VENT,SIA_INDIVIDUALOFFICE_OCC,CELLS:ROOMX1,18.98,1.4,8.170E-002,4.306E-003,6.030E-002,5.000,Natural,0.000,1.0,1.000,0.000,0.000,0.000,24.00,100.00,0.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, CELLS:ENTRANCE NAT VENT,SLL_OFFICE_CIRCULATION_OCC,CELLS:ENTRANCE,14.97,1.5,6.444E-002,4.306E-003,4.306E-002,5.000,Natural,0.000,1.0,1.000,0.000,0.000,0.000,24.00,100.00,0.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, CELLS:ROOMX2 NAT VENT,SIA_INDIVIDUALOFFICE_OCC,CELLS:ROOMX2,19.97,1.4,8.600E-002,4.306E-003,6.030E-002,5.000,Natural,0.000,1.0,1.000,0.000,0.000,0.000,24.00,100.00,0.00,-100.00,100.00,40.00
+! <AirFlow Model>, Simple
+ AirFlow Model, Simple
+! <RoomAir Model>, Zone Name, Mixing/Mundt/UCSDDV/UCSDCV/UCSDUFI/UCSDUFE/User Defined
+RoomAir Model,CELLS:ROOMX1,Mixing/Well-Stirred
+RoomAir Model,CELLS:ENTRANCE,Mixing/Well-Stirred
+RoomAir Model,CELLS:ROOMX2,Mixing/Well-Stirred
+! <AirflowNetwork Model:Control>, No Multizone or Distribution/Multizone with Distribution/Multizone without Distribution/Multizone with Distribution only during Fan Operation
+AirflowNetwork Model:Control,NoMultizoneOrDistribution
+! <Zone Volume Capacitance Multiplier>, Sensible Heat Capacity Multiplier, Moisture Capacity Multiplier, Carbon Dioxide Capacity Multiplier, Generic Contaminant Capacity Multiplier
+Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
+! <Load Timesteps in Zone Design Calculation Averaging Window>, Value
+ Load Timesteps in Zone Design Calculation Averaging Window,    2
+! <Heating Sizing Factor Information>, Sizing Factor ID, Value
+ Heating Sizing Factor Information, Global,   1.2500    
+ Heating Sizing Factor Information, Zone CELLS:ROOMX1,   1.2500    
+ Heating Sizing Factor Information, Zone CELLS:ENTRANCE,   1.2500    
+ Heating Sizing Factor Information, Zone CELLS:ROOMX2,   1.2500    
+! <Cooling Sizing Factor Information>, Sizing Factor ID, Value
+ Cooling Sizing Factor Information, Global,   1.1500    
+ Cooling Sizing Factor Information, Zone CELLS:ROOMX1,   1.1500    
+ Cooling Sizing Factor Information, Zone CELLS:ENTRANCE,   1.1500    
+ Cooling Sizing Factor Information, Zone CELLS:ROOMX2,   1.1500    
+! <Sky Daylight Factors>, MonthAndDay, Zone Name, Window Name, Reference Point, Daylight Factor
+ Sky Daylight Factors,Clear Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_3_0_0_0_0_1_WIN,CELLS:ROOMX1 REF POINT 1,4.8425E-003
+ Sky Daylight Factors,Clear Turbid Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_3_0_0_0_0_1_WIN,CELLS:ROOMX1 REF POINT 1,3.8750E-003
+ Sky Daylight Factors,Intermediate Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_3_0_0_0_0_1_WIN,CELLS:ROOMX1 REF POINT 1,2.5794E-003
+ Sky Daylight Factors,Overcast Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_3_0_0_0_0_1_WIN,CELLS:ROOMX1 REF POINT 1,5.2584E-003
+ Sky Daylight Factors,Clear Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_3_0_0_1_0_0_WIN,CELLS:ROOMX1 REF POINT 1,1.5634E-002
+ Sky Daylight Factors,Clear Turbid Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_3_0_0_1_0_0_WIN,CELLS:ROOMX1 REF POINT 1,1.2591E-002
+ Sky Daylight Factors,Intermediate Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_3_0_0_1_0_0_WIN,CELLS:ROOMX1 REF POINT 1,8.7289E-003
+ Sky Daylight Factors,Overcast Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_3_0_0_1_0_0_WIN,CELLS:ROOMX1 REF POINT 1,1.7092E-002
+ Sky Daylight Factors,Clear Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_5_0_0_0_0_1_WIN,CELLS:ROOMX1 REF POINT 1,9.8127E-003
+ Sky Daylight Factors,Clear Turbid Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_5_0_0_0_0_1_WIN,CELLS:ROOMX1 REF POINT 1,9.5437E-003
+ Sky Daylight Factors,Intermediate Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_5_0_0_0_0_1_WIN,CELLS:ROOMX1 REF POINT 1,7.5037E-003
+ Sky Daylight Factors,Overcast Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_5_0_0_0_0_1_WIN,CELLS:ROOMX1 REF POINT 1,5.2658E-003
+ Sky Daylight Factors,Clear Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_5_0_0_1_0_0_WIN,CELLS:ROOMX1 REF POINT 1,2.9195E-002
+ Sky Daylight Factors,Clear Turbid Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_5_0_0_1_0_0_WIN,CELLS:ROOMX1 REF POINT 1,2.7956E-002
+ Sky Daylight Factors,Intermediate Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_5_0_0_1_0_0_WIN,CELLS:ROOMX1 REF POINT 1,2.2695E-002
+ Sky Daylight Factors,Overcast Sky,07/15,CELLS:ROOMX1,CELLS:ROOMX1_WALL_5_0_0_1_0_0_WIN,CELLS:ROOMX1 REF POINT 1,1.7079E-002
+ Sky Daylight Factors,Clear Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_3_0_0_0_0_1_WIN,CELLS:ROOMX2 REF POINT 1,4.8524E-003
+ Sky Daylight Factors,Clear Turbid Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_3_0_0_0_0_1_WIN,CELLS:ROOMX2 REF POINT 1,3.8803E-003
+ Sky Daylight Factors,Intermediate Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_3_0_0_0_0_1_WIN,CELLS:ROOMX2 REF POINT 1,2.5806E-003
+ Sky Daylight Factors,Overcast Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_3_0_0_0_0_1_WIN,CELLS:ROOMX2 REF POINT 1,5.2822E-003
+ Sky Daylight Factors,Clear Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_3_0_0_1_0_0_WIN,CELLS:ROOMX2 REF POINT 1,1.5418E-002
+ Sky Daylight Factors,Clear Turbid Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_3_0_0_1_0_0_WIN,CELLS:ROOMX2 REF POINT 1,1.2416E-002
+ Sky Daylight Factors,Intermediate Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_3_0_0_1_0_0_WIN,CELLS:ROOMX2 REF POINT 1,8.6107E-003
+ Sky Daylight Factors,Overcast Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_3_0_0_1_0_0_WIN,CELLS:ROOMX2 REF POINT 1,1.6838E-002
+ Sky Daylight Factors,Clear Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_5_0_0_0_0_1_WIN,CELLS:ROOMX2 REF POINT 1,9.6035E-003
+ Sky Daylight Factors,Clear Turbid Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_5_0_0_0_0_1_WIN,CELLS:ROOMX2 REF POINT 1,9.3387E-003
+ Sky Daylight Factors,Intermediate Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_5_0_0_0_0_1_WIN,CELLS:ROOMX2 REF POINT 1,7.3319E-003
+ Sky Daylight Factors,Overcast Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_5_0_0_0_0_1_WIN,CELLS:ROOMX2 REF POINT 1,5.1390E-003
+ Sky Daylight Factors,Clear Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_5_0_0_1_0_0_WIN,CELLS:ROOMX2 REF POINT 1,2.9198E-002
+ Sky Daylight Factors,Clear Turbid Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_5_0_0_1_0_0_WIN,CELLS:ROOMX2 REF POINT 1,2.7982E-002
+ Sky Daylight Factors,Intermediate Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_5_0_0_1_0_0_WIN,CELLS:ROOMX2 REF POINT 1,2.2678E-002
+ Sky Daylight Factors,Overcast Sky,07/15,CELLS:ROOMX2,CELLS:ROOMX2_WALL_5_0_0_1_0_0_WIN,CELLS:ROOMX2 REF POINT 1,1.6994E-002
+! <Zone Sizing Information>, Zone Name, Load Type, Calc Des Load {W}, User Des Load {W}, Calc Des Air Flow Rate {m3/s}, User Des Air Flow Rate {m3/s}, Design Day Name, Date/Time of Peak, Temperature at Peak {C}, Humidity Ratio at Peak {kgWater/kgDryAir}, Floor Area {m2}, # Occupants, Calc Outdoor Air Flow Rate {m3/s}, Calc DOAS Heat Addition Rate {W}
+ Zone Sizing Information, CELLS:ROOMX1, Cooling, 0.00000, 0.00000, 0.00000, 1.35486E-002, SUMMER DESIGN DAY IN FRIBOURG (O1-O1:31-12) JUL, , 30.80000, 1.00469E-002, 18.97560, 1.35486, 1.35486E-002, 0.00000
+ Zone Sizing Information, CELLS:ROOMX1, Heating, 433.19358, 541.49198, 1.92522E-002, 2.40652E-002, WINTER DESIGN DAY IN FRIBOURG (O1-O1:31-12), 1/15 24:00:00, -6.20000, 2.34660E-003, 18.97560, 1.35486, 1.35486E-002, 0.00000
+ Zone Sizing Information, CELLS:ENTRANCE, Cooling, 0.00000, 0.00000, 0.00000, 1.49660E-002, SUMMER DESIGN DAY IN FRIBOURG (O1-O1:31-12) JUL, , 30.80000, 1.00469E-002, 14.96600, 1.49660, 1.49660E-002, 0.00000
+ Zone Sizing Information, CELLS:ENTRANCE, Heating, 649.81094, 812.26368, 3.65846E-002, 4.57307E-002, WINTER DESIGN DAY IN FRIBOURG (O1-O1:31-12), 1/15 24:00:00, -6.20000, 2.34660E-003, 14.96600, 1.49660, 1.49660E-002, 0.00000
+ Zone Sizing Information, CELLS:ROOMX2, Cooling, 0.00000, 0.00000, 0.00000, 1.42609E-002, SUMMER DESIGN DAY IN FRIBOURG (O1-O1:31-12) JUL, , 30.80000, 1.00469E-002, 19.97330, 1.42609, 1.42609E-002, 0.00000
+ Zone Sizing Information, CELLS:ROOMX2, Heating, 0.00000, 0.00000, 0.00000, 1.42609E-002, WINTER DESIGN DAY IN FRIBOURG (O1-O1:31-12), , -6.20000, 2.34660E-003, 19.97330, 1.42609, 1.42609E-002, 0.00000
+! <Component Sizing Information>, Component Type, Component Name, Input Field Description, Value
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CELLS:ROOMX1 IDEAL LOADS AIR, Design Size Maximum Heating Air Flow Rate [m3/s], 2.40652E-002
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CELLS:ROOMX1 IDEAL LOADS AIR, Design Size Maximum Sensible Heating Capacity [W], 897.38932
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CELLS:ROOMX1 IDEAL LOADS AIR, Design Size Maximum Cooling Air Flow Rate [m3/s], 1.35486E-002
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CELLS:ROOMX1 IDEAL LOADS AIR, Design Size Maximum Total Cooling Capacity [W], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CELLS:ENTRANCE IDEAL LOADS AIR, Design Size Maximum Heating Air Flow Rate [m3/s], 4.57307E-002
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CELLS:ENTRANCE IDEAL LOADS AIR, Design Size Maximum Sensible Heating Capacity [W], 1276.32026
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CELLS:ENTRANCE IDEAL LOADS AIR, Design Size Maximum Cooling Air Flow Rate [m3/s], 1.49660E-002
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CELLS:ENTRANCE IDEAL LOADS AIR, Design Size Maximum Total Cooling Capacity [W], 0.00000
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CELLS:ROOMX2 IDEAL LOADS AIR, Design Size Maximum Heating Air Flow Rate [m3/s], 1.42609E-002
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CELLS:ROOMX2 IDEAL LOADS AIR, Design Size Maximum Sensible Heating Capacity [W], 695.49556
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CELLS:ROOMX2 IDEAL LOADS AIR, Design Size Maximum Cooling Air Flow Rate [m3/s], 1.42609E-002
+ Component Sizing Information, ZoneHVAC:IdealLoadsAirSystem, CELLS:ROOMX2 IDEAL LOADS AIR, Design Size Maximum Total Cooling Capacity [W], 0.00000
+! <Zone Surfaces>,Zone Name,# Surfaces
+! <Shading Surfaces>,Number of Shading Surfaces,# Surfaces
+! <HeatTransfer Surface>,Surface Name,Surface Class,Base Surface,Heat Transfer Algorithm,Construction,Nominal U (w/o film coefs) {W/m2-K},Nominal U (with film coefs) {W/m2-K},Solar Diffusing,Area (Net) {m2},Area (Gross) {m2},Area (Sunlit Calc) {m2},Azimuth {deg},Tilt {deg},~Width {m},~Height {m},Reveal {m},ExtBoundCondition,ExtConvCoeffCalc,IntConvCoeffCalc,SunExposure,WindExposure,ViewFactorToGround,ViewFactorToSky,ViewFactorToGround-IR,ViewFactorToSky-IR,#Sides
+! <Shading Surface>,Surface Name,Surface Class,Base Surface,Heat Transfer Algorithm,Transmittance Schedule,Min Schedule Value,Max Schedule Value,Solar Diffusing,Area (Net) {m2},Area (Gross) {m2},Area (Sunlit Calc) {m2},Azimuth {deg},Tilt {deg},~Width {m},~Height {m},Reveal {m},ExtBoundCondition,ExtConvCoeffCalc,IntConvCoeffCalc,SunExposure,WindExposure,ViewFactorToGround,ViewFactorToSky,ViewFactorToGround-IR,ViewFactorToSky-IR,#Sides
+! <Frame/Divider Surface>,Surface Name,Surface Class,Base Surface,Heat Transfer Algorithm,Construction,Nominal U (w/o film coefs) {W/m2-K},Nominal U (with film coefs) {W/m2-K},Solar Diffusing,Area (Net) {m2},Area (Gross) {m2},Area (Sunlit Calc) {m2},Azimuth {deg},Tilt {deg},~Width {m},~Height {m},Reveal {m}
+Shading Surfaces,Number of Shading Surfaces,32
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 1 - SURFACE 1 (1),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 1,0.00,0.00, ,1.00,1.00,1.00,0.00,0.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 1 - SURFACE 1 (1),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 1,0.00,0.00, ,1.00,1.00,1.00,180.00,180.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 2 - SURFACE 1 (2),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 2,0.00,0.00, ,0.70,0.70,0.70,90.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 2 - SURFACE 1 (2),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 2,0.00,0.00, ,0.70,0.70,0.70,270.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 3 - SURFACE 1 (3),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 3,0.00,0.00, ,0.70,0.70,0.70,90.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 3 - SURFACE 1 (3),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 3,0.00,0.00, ,0.70,0.70,0.70,270.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 4 - SURFACE 1 (4),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 4,0.00,0.00, ,1.00,1.00,1.00,0.00,0.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 4 - SURFACE 1 (4),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 4,0.00,0.00, ,1.00,1.00,1.00,180.00,180.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 5 - SURFACE 1 (5),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 5,0.00,0.00, ,1.00,1.00,1.00,0.00,0.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 5 - SURFACE 1 (5),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 5,0.00,0.00, ,1.00,1.00,1.00,180.00,180.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 6 - SURFACE 1 (6),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 6,0.00,0.00, ,0.70,0.70,0.70,90.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 6 - SURFACE 1 (6),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 6,0.00,0.00, ,0.70,0.70,0.70,270.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 7 - SURFACE 1 (7),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 7,0.00,0.00, ,0.70,0.70,0.70,90.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 7 - SURFACE 1 (7),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 7,0.00,0.00, ,0.70,0.70,0.70,270.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 8 - SURFACE 1 (8),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 8,0.00,0.00, ,1.00,1.00,1.00,0.00,0.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 8 - SURFACE 1 (8),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 8,0.00,0.00, ,1.00,1.00,1.00,180.00,180.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 9 - SURFACE 1 (9),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 9,0.00,0.00, ,1.00,1.00,1.00,0.00,0.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 9 - SURFACE 1 (9),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 9,0.00,0.00, ,1.00,1.00,1.00,180.00,180.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 10 - SURFACE 1 (10),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 10,0.00,0.00, ,0.70,0.70,0.70,270.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 10 - SURFACE 1 (10),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 10,0.00,0.00, ,0.70,0.70,0.70,90.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 11 - SURFACE 1 (11),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 11,0.00,0.00, ,0.70,0.70,0.70,90.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 11 - SURFACE 1 (11),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 11,0.00,0.00, ,0.70,0.70,0.70,270.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 12 - SURFACE 1 (12),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 12,0.00,0.00, ,1.00,1.00,1.00,0.00,0.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 12 - SURFACE 1 (12),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 12,0.00,0.00, ,1.00,1.00,1.00,180.00,180.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 13 - SURFACE 1 (13),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 13,0.00,0.00, ,1.00,1.00,1.00,180.00,0.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 13 - SURFACE 1 (13),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 13,0.00,0.00, ,1.00,1.00,1.00,0.00,180.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 14 - SURFACE 1 (14),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 14,0.00,0.00, ,0.70,0.70,0.70,90.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 14 - SURFACE 1 (14),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 14,0.00,0.00, ,0.70,0.70,0.70,270.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 15 - SURFACE 1 (15),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 15,0.00,0.00, ,0.70,0.70,0.70,90.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 15 - SURFACE 1 (15),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 15,0.00,0.00, ,0.70,0.70,0.70,270.00,90.00,0.38,1.83,,,,,,,,,,,4
+Shading Surface,EPFL_CELLS - COMPONENT BLOCK 16 - SURFACE 1 (16),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 16,0.00,0.00, ,1.00,1.00,1.00,180.00,0.00,2.62,0.38,,,,,,,,,,,4
+Shading Surface,Mir-EPFL_CELLS - COMPONENT BLOCK 16 - SURFACE 1 (16),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR EPFL_CELLS - COMPONENT BLOCK 16,0.00,0.00, ,1.00,1.00,1.00,0.00,180.00,2.62,0.38,,,,,,,,,,,4
+Zone Surfaces,CELLS:ROOMX1,10
+HeatTransfer Surface,CELLS:ROOMX1_PARTITION_2_0_0,Wall,,CTF - ConductionTransferFunction,SLL_PARTITION_7O3_GYPSUM,0.806,0.720,,19.19,19.19,19.19,90.00,90.00,6.19,3.10,0.00,CELLS:ENTRANCE_PARTITION_4_0_10000,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,CELLS:ROOMX1_WALL_3_0_0,Wall,,CTF - ConductionTransferFunction,CELLS_EXTERNAL_WALL_ROOM2,0.173,0.169,,4.92,9.50,5.40,0.00,90.00,3.07,3.10,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.63,0.37,4
+HeatTransfer Surface,CELLS:ROOMX1_WALL_3_0_0_0_0_1_WIN,Window,CELLS:ROOMX1_WALL_3_0_0,Window5 Detailed Fenestration,1001,N/A,0.600,No,1.01,1.06,1.06,0.00,90.00,0.61,1.75,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.65,0.35,4
+Frame/Divider Surface,1,Frame,CELLS:ROOMX1_WALL_3_0_0_0_0_1_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.19,0.19,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,CELLS:ROOMX1_WALL_3_0_0_0_0_1_WIN,,,N/A,N/A,,4.66E-002,4.66E-002,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,CELLS:ROOMX1_WALL_3_0_0_1_0_0_WIN,Window,CELLS:ROOMX1_WALL_3_0_0,Window5 Detailed Fenestration,1001,N/A,0.600,No,2.98,3.05,3.05,0.00,90.00,1.75,1.75,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.61,0.39,4
+Frame/Divider Surface,1,Frame,CELLS:ROOMX1_WALL_3_0_0_1_0_0_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.29,0.29,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,CELLS:ROOMX1_WALL_3_0_0_1_0_0_WIN,,,N/A,N/A,,6.94E-002,6.94E-002,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,CELLS:ROOMX1_WALL_4_0_0,Wall,,CTF - ConductionTransferFunction,CELLS_EXTERNAL_WALL_ROOM2,0.173,0.169,,19.19,19.19,19.19,270.00,90.00,6.19,3.10,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer Surface,CELLS:ROOMX1_WALL_5_0_0,Wall,,CTF - ConductionTransferFunction,CELLS_EXTERNAL_WALL_ROOM2,0.173,0.169,,4.92,9.50,5.40,180.00,90.00,3.07,3.10,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.64,0.36,4
+HeatTransfer Surface,CELLS:ROOMX1_WALL_5_0_0_0_0_1_WIN,Window,CELLS:ROOMX1_WALL_5_0_0,Window5 Detailed Fenestration,1001,N/A,0.600,No,1.01,1.06,1.06,180.00,90.00,0.61,1.75,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.65,0.35,4
+Frame/Divider Surface,1,Frame,CELLS:ROOMX1_WALL_5_0_0_0_0_1_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.19,0.19,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,CELLS:ROOMX1_WALL_5_0_0_0_0_1_WIN,,,N/A,N/A,,4.66E-002,4.66E-002,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,CELLS:ROOMX1_WALL_5_0_0_1_0_0_WIN,Window,CELLS:ROOMX1_WALL_5_0_0,Window5 Detailed Fenestration,1001,N/A,0.600,No,2.98,3.05,3.05,180.00,90.00,1.75,1.75,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.60,0.40,4
+Frame/Divider Surface,1,Frame,CELLS:ROOMX1_WALL_5_0_0_1_0_0_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.29,0.29,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,CELLS:ROOMX1_WALL_5_0_0_1_0_0_WIN,,,N/A,N/A,,6.94E-002,6.94E-002,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,CELLS:ROOMX1_EXTFLOOR_0_0_0,Floor,,CTF - ConductionTransferFunction,CELLS_EXTARNAL_FLOOR,9.284E-002,9.079E-002,,18.98,18.98,18.98,0.00,180.00,3.07,6.19,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,1.00,0.00,1.00,0.00,4
+HeatTransfer Surface,CELLS:ROOMX1_ROOF_1_0_0,Roof,,CTF - ConductionTransferFunction,CELLS_ROOF,0.181,0.175,,18.98,18.98,18.98,180.00,0.00,3.07,6.19,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
+Zone Surfaces,CELLS:ENTRANCE,7
+HeatTransfer Surface,CELLS:ENTRANCE_PARTITION_4_0_10000,Wall,,CTF - ConductionTransferFunction,SLL_PARTITION_7O3_GYPSUM_REV,0.806,0.720,,19.19,19.19,19.19,270.00,90.00,6.19,3.10,0.00,CELLS:ROOMX1_PARTITION_2_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,CELLS:ENTRANCE_PARTITION_2_0_0,Wall,,CTF - ConductionTransferFunction,SLL_PARTITION_7O3_GYPSUM,0.806,0.720,,19.19,19.19,19.19,90.00,90.00,6.19,3.10,0.00,CELLS:ROOMX2_PARTITION_4_0_10001,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,CELLS:ENTRANCE_WALL_3_0_0,Wall,,CTF - ConductionTransferFunction,CELLS_EXTERNAL_WALL_ROOM2,0.173,0.169,,7.50,7.50,7.50,0.00,90.00,2.42,3.10,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.52,0.48,4
+HeatTransfer Surface,CELLS:ENTRANCE_WALL_5_0_0,Wall,,CTF - ConductionTransferFunction,CELLS_EXTERNAL_WALL_ROOM2,0.173,0.169,,5.51,7.50,5.51,180.00,90.00,2.42,3.10,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.52,0.48,4
+HeatTransfer Surface,CELLS:ENTRANCE_WALL_5_0_0_0_0_0_DOOR,Door,CELLS:ENTRANCE_WALL_5_0_0,CTF - ConductionTransferFunction,WOODEN DOOR,5.429,5.429,,1.99,1.99,1.99,180.00,90.00,1.00,2.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.51,0.49,4
+HeatTransfer Surface,CELLS:ENTRANCE_EXTFLOOR_0_0_0,Floor,,CTF - ConductionTransferFunction,CELLS_EXTARNAL_FLOOR,9.284E-002,9.079E-002,,14.97,14.97,14.97,0.00,180.00,2.42,6.19,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,1.00,0.00,1.00,0.00,4
+HeatTransfer Surface,CELLS:ENTRANCE_ROOF_1_0_0,Roof,,CTF - ConductionTransferFunction,CELLS_ROOF,0.181,0.175,,14.97,14.97,14.97,180.00,0.00,2.42,6.19,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
+Zone Surfaces,CELLS:ROOMX2,10
+HeatTransfer Surface,CELLS:ROOMX2_PARTITION_4_0_10001,Wall,,CTF - ConductionTransferFunction,SLL_PARTITION_7O3_GYPSUM_REV,0.806,0.720,,19.19,19.19,19.19,270.00,90.00,6.19,3.10,0.00,CELLS:ENTRANCE_PARTITION_2_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,CELLS:ROOMX2_WALL_2_0_0,Wall,,CTF - ConductionTransferFunction,CELLS_EXTERNAL_WALL_ROOM2,0.173,0.169,,19.19,19.19,19.19,90.00,90.00,6.19,3.10,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer Surface,CELLS:ROOMX2_WALL_3_0_0,Wall,,CTF - ConductionTransferFunction,CELLS_EXTERNAL_WALL_ROOM2,0.173,0.169,,5.42,10.00,5.90,0.00,90.00,3.23,3.10,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.63,0.37,4
+HeatTransfer Surface,CELLS:ROOMX2_WALL_3_0_0_0_0_1_WIN,Window,CELLS:ROOMX2_WALL_3_0_0,Window5 Detailed Fenestration,1001,N/A,0.600,No,1.01,1.06,1.06,0.00,90.00,0.61,1.75,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.64,0.36,4
+Frame/Divider Surface,1,Frame,CELLS:ROOMX2_WALL_3_0_0_0_0_1_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.19,0.19,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,CELLS:ROOMX2_WALL_3_0_0_0_0_1_WIN,,,N/A,N/A,,4.66E-002,4.66E-002,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,CELLS:ROOMX2_WALL_3_0_0_1_0_0_WIN,Window,CELLS:ROOMX2_WALL_3_0_0,Window5 Detailed Fenestration,1001,N/A,0.600,No,2.98,3.05,3.05,0.00,90.00,1.75,1.75,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.61,0.39,4
+Frame/Divider Surface,1,Frame,CELLS:ROOMX2_WALL_3_0_0_1_0_0_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.29,0.29,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,CELLS:ROOMX2_WALL_3_0_0_1_0_0_WIN,,,N/A,N/A,,6.94E-002,6.94E-002,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,CELLS:ROOMX2_WALL_5_0_0,Wall,,CTF - ConductionTransferFunction,CELLS_EXTERNAL_WALL_ROOM2,0.173,0.169,,5.42,10.00,5.90,180.00,90.00,3.23,3.10,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.63,0.37,4
+HeatTransfer Surface,CELLS:ROOMX2_WALL_5_0_0_0_0_1_WIN,Window,CELLS:ROOMX2_WALL_5_0_0,Window5 Detailed Fenestration,1001,N/A,0.600,No,1.01,1.06,1.06,180.00,90.00,0.61,1.75,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.65,0.35,4
+Frame/Divider Surface,1,Frame,CELLS:ROOMX2_WALL_5_0_0_0_0_1_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.19,0.19,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,CELLS:ROOMX2_WALL_5_0_0_0_0_1_WIN,,,N/A,N/A,,4.66E-002,4.66E-002,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,CELLS:ROOMX2_WALL_5_0_0_1_0_0_WIN,Window,CELLS:ROOMX2_WALL_5_0_0,Window5 Detailed Fenestration,1001,N/A,0.600,No,2.98,3.05,3.05,180.00,90.00,1.75,1.75,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.60,0.40,4
+Frame/Divider Surface,1,Frame,CELLS:ROOMX2_WALL_5_0_0_1_0_0_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.29,0.29,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,CELLS:ROOMX2_WALL_5_0_0_1_0_0_WIN,,,N/A,N/A,,6.94E-002,6.94E-002,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,CELLS:ROOMX2_EXTFLOOR_0_0_0,Floor,,CTF - ConductionTransferFunction,CELLS_EXTARNAL_FLOOR,9.284E-002,9.079E-002,,19.97,19.97,19.97,0.00,180.00,3.23,6.19,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,1.00,0.00,1.00,0.00,4
+HeatTransfer Surface,CELLS:ROOMX2_ROOF_1_0_0,Roof,,CTF - ConductionTransferFunction,CELLS_ROOF,0.181,0.175,,19.97,19.97,19.97,180.00,0.00,3.23,6.19,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
+! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:Start DayOfWeek,  Use Daylight Saving, Use Holidays, Apply Weekend Holiday Rule,  Use Rain Values, Use Snow Values, Sky Temperature Model
+! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
+! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
+! <Environment:WarmupDays>, NumberofWarmupDays
+Environment,FRIBOURG (O1-O1:31-12),WeatherFileRunPeriod,01/01/2017,05/31/2017,Sunday,151,Use RunPeriod Specified Day,No,No,Yes,Yes,Yes,Clark and Allen
+Environment:Daylight Saving,Yes,InputFile,03/26,10/29

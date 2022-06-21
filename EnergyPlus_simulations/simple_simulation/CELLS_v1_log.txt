@@ -1,0 +1,2 @@
+FMIL: module = Slave, log level = 2: [error][FMU status:Error] fmiInstantiateSlave: Could not create the output directory C:\Users\hbenoit\Desktop\DIET_Controller\EnergyPlus_simulations\simple_simulation\Output_EPExport_Slave. Instantiation of Slave failed.
+

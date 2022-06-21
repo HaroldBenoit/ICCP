@@ -1,0 +1,2 @@
+FMIL: module = Model, log level = 2: [error][FMU status:Error] fmi2EnterInitializationMode: The delta between the FMU stop time 1.000000 and the FMU start time 0.000000 must be a multiple of 86400. This is required by EnergyPlus. The current delta is 1.000000. Instantiation of Model failed.
+
