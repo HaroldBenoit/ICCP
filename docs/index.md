@@ -11,7 +11,7 @@ permalink: /
 
 
 
-`ICCP` or *Integrated Comfort Controller Pipeline* is a project created by the [ICE Lab](https://www.epfl.ch/labs/ice/) at EPFL. Its goal is to facilitate the development and research of **reinforcement learning based controllers** in the context of **energy saving** and **thermal comfort** in buildings. 
+`ICCP` or *Integrated Comfort Controller Pipeline* is a project created by the [ICE Lab](https://www.epfl.ch/labs/ice/) at EPFL. Its goal is to facilitate the development and research of **reinforcement learning based controllers** in the context of **energy saving** and **thermal comfort** in buildings. Its Github page may be found [here](https://github.com/HaroldBenoit/ICCP).
 
 It integrates particularly well with [EnergyPlus](https://energyplus.net/), the  open-source building energy simulation program.
 
