@@ -52,8 +52,8 @@ search:
 
 # Aux links for the upper right navigation
 aux_links:
-  "ICE Lab EPFL":
-    - "//epfl.ch/labs/ice/"
+  "Github":
+    - "//github.com/HaroldBenoit/ICCP"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
